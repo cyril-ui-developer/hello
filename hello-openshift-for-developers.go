@@ -9,7 +9,7 @@ import (
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	response := os.Getenv("RESPONSE")
 	if len(response) == 0 {
-		response = "Hello Golang Application!"
+		response = "Hello Golang App Demo!"
 	}
 
 	fmt.Fprintln(w, response)
