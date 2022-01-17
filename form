@@ -1,0 +1,34 @@
+ // const [previousValue, setPreviousValue] = React.useState([]);
+  const [matchingSelector, setMatchingSelector] = React.useState<PodDisruptionBudgetKind>(null);
+  const items = {
+    maxUnavailable: 'maxUnavailable',
+    minAvailable: 'minAvailable',
+  };
+
+  const existingData = React.useMemo(() => existingResource, [existingResource]);
+
+  const onFormValuesChange = React.useCallback(
+    (values) => {
+      setFormValues(values);
+      onChange(pdbToK8sResource(values));
+    },
+    [onChange],
+  );
+
+  React.useEffect(()=>{
+    previousValueRef.current = SelectorInput.arrayify(selector)
+  })
+
+  React.useEffect(() => {
+    if (!_.isEmpty(existingData) && _.isEmpty(formValues.name)) {
+      setFormValues(formValuesFromK8sResource(existingData));
+    }
+    if (
+      !_.isEqual(SelectorInput.arrayify(selector), previousValue) &&
+      _.isEmpty(formValues.selector)
+    ) {
+      setLabels(SelectorInput.arrayify(selector));
+    //  setPreviousValue(SelectorInput.arrayify(selector));
+      onFormValuesChange({ ...formValues, selector });
+    }
+  }, [existingData, formValues, onFormValuesChange, previousValue, selector]);
