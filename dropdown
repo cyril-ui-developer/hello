@@ -1,0 +1,8 @@
+            {/* <Dropdown
+              items={items}
+              title={t('public~Requirement')}
+              id="pdb-requirement"
+              dropDownClassName="dropdown--full-width"
+              selectedKey={formValues.requirement}
+              onChange={handleAvailabilityRequirementKeyChange}
+            /> */}
