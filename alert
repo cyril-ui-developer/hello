@@ -1,0 +1,12 @@
+    {/* <GridItem span={12}>
+            {formValues.maxUnavailable === '0' && (
+              <Alert
+                className="co-alert"
+                variant="warning"
+                title={t(
+                  'public~The value of maxUnavailable = 0 might not protect your pods from disruption',
+                )}
+                isInline
+              />
+            )}
+          </GridItem> */}
