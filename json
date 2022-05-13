@@ -1,0 +1,9 @@
+const pdbMockData = {
+  "kind": "PodDisruptionBudget",
+  "apiVersion": "policy/v1",
+  "metadata": {
+    "name": "reactapp",
+    "namespace": "pdb-test",
+  },
+  "spec": {}
+}
