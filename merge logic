@@ -1,0 +1,8 @@
+
+//  // const existingYAML = mergeResources(existingResource, initialYAML);
+// export const mergeResources = (existingRes: PodDisruptionBudgetKind, initialYAML: string) =>
+//   safeJSToYAML(
+//     _.merge({}, existingRes, _.omit(safeYAMLToJS(initialYAML), ['metadata.name']), '', {
+//       skipInvalid: true,
+//     }),
+//   );
